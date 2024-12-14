@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+    <title>Crud LocalStorage</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de Clientes</h1>
+    </header>
+    <main>
+        <nav>
+            <button type="button" class="button-register" id="button-register">Cadastrar Cliente</button>
+            <div class="input-wrapper">
+                <input type="text" id="filter-client" class="filter-client" placeholder="Pesquisar por cliente...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </nav>
+        <table id="tb-client">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Cidade</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header>
+                    <h1>Novo Cliente</h1>
+                    <button type="button" class="close-modal" id="close-modal">&#10006;</button type="button">
+                </header>
+                <form id="form">
+                    <label for="name">Nome:</label>
+                    <input type="text" class="modal-field" data-index="new" id="input-name" placeholder="Nome do Cliente..." required>
+                    <label for="email">Email:</label>
+                    <input type="email" class="modal-field" id="input-email" placeholder="cliente@email.com..." required>
+                    <label for="city">Cidade:</label>
+                    <input type="text" class="modal-field" id="input-city" placeholder="Cidade do Cliente..." required>
+                    <label for="cpf">CPF:</label>
+                    <input type="text" class="modal-field" id="input-cpf" placeholder="000.000.000-00..." required>
+                    <label for="telephone">Telefone:</label>
+                    <input type="text" class="modal-field" id="input-telephone" placeholder="(00) 00000-0000..." required>
+                    <footer class="modal-footer">
+                        <button type="submit" id="register-client">Cadastrar</button>
+                        <button type="button" class="cancel-button" id="cancel-button">Cancelar</button>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
